@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpRootViewController(window: UIWindow) {
-        let movieListViewController = MovieListViewController()
+        let movieListViewController = ControllerSceneDIContainer.sharedInstance.makeMovieListControllerInjectable()
         let navController = UINavigationController(rootViewController: movieListViewController)
         window.rootViewController = navController
         window.makeKeyAndVisible()
